@@ -25,7 +25,7 @@ let cssDir = 'assets/css',
     imgDir = 'assets/img';
 
 let jsPathPattern = '/**/*.js',
-    htmlPathPattern = '/**/*.html',
+    njkPathPattern = '/**/*.njk',
     scssPathPattern = '/**/*.scss',
     imgPathPattern = '/**/*.*';
 
@@ -139,7 +139,7 @@ function compileToSCSS() {
 }
 
 function compileToHTML() {
-  return _compileToHTML(htmlDir + htmlPathPattern, null, false, true);
+  _compileToHTML(htmlDir + njkPathPattern, null, false, true);
 }
 
 function watching() {
@@ -154,7 +154,7 @@ function watching() {
     server:{
       baseDir: "./"
     },
-    startPath: 'pages/index.html',
+    startPath: 'pages/auth-login.html',
     port: 8080
   });
 
@@ -162,7 +162,7 @@ function watching() {
    * Watch ${htmlDir}
    */
   watch([
-    htmlDir + htmlPathPattern,
+    htmlDir + njkPathPattern,
     scssDir + scssPathPattern,
     jsDir + jsPathPattern,
     imgDir + imgPathPattern,
@@ -175,11 +175,11 @@ function watching() {
       });
     }
 
-    if(file.indexOf('layouts') > -1 && file.indexOf('.html') > -1) {
-      _compileToHTML(htmlDir + htmlPathPattern, () => {
+    if(file.indexOf('layouts') > -1 && file.indexOf('.njk') > -1) {
+      _compileToHTML(htmlDir + njkPathPattern, () => {
         return browserSync.reload();
       });
-    }else if(file.indexOf('.html') > -1) {
+    }else if(file.indexOf('.njk') > -1) {
       _compileToHTML(file, () => {
         return browserSync.reload();
       });

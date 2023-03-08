@@ -1,0 +1,50 @@
+<ul class="sidebar-menu">
+  <li class="menu-header">Dashboard</li>
+  <li{{ ' class="active"'|is_active('^admin/index.html(.*)', page)|safe }}>
+    <a class="nav-link" href="index.html">
+      <i class="fa fa-tachometer-alt"></i>
+      <span>Dashboard</span></a>
+  </li>
+
+  <li class="nav-item dropdown{{ ' active'|is_active('^admin/management-(.*)', page)|safe }}">
+    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+      <i class="fas fa-database"></i>
+      <span>Management</span></a>
+    <ul class="dropdown-menu">
+      <li{{ ' class="active"'|is_active('^admin/management-user(.*)', page)|safe }}>
+        <a class="nav-link" href="management-user.html">User</a>
+      </li>
+      <li{{ ' class="active"'|is_active('^layout-transparent(.*)', page)|safe }}>
+        <a class="nav-link" href="layout-transparent.html">Jabatan</a>
+      </li>
+      <li{{ ' class="active"'|is_active('^layout-top(.*)', page)|safe }}>
+        <a class="nav-link" href="layout-top-navigation.html">Divisi</a>
+      </li>
+      <li{{ ' class="active"'|is_active('^layout-top(.*)', page)|safe }}>
+        <a class="nav-link" href="layout-top-navigation.html">Area</a>
+      </li>
+      <li{{ ' class="active"'|is_active('^layout-top(.*)', page)|safe }}>
+        <a class="nav-link" href="layout-top-navigation.html">Equipment</a>
+      </li>
+      <li{{ ' class="active"'|is_active('^admin/management-content(.*)', page)|safe }}>
+        <a class="nav-link" href="management-content.html">Content</a>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown{{ ' active'|is_active('^report-(.*)', page)|safe }}">
+    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+      <i class="fas fa-chart-bar"></i>
+      <span>Report</span></a>
+    <ul class="dropdown-menu">
+      <li{{ ' class="active"'|is_active('^layout-default(.*)', page)|safe }}>
+        <a class="nav-link" href="layout-default.html">Activities</a>
+      </li>
+      <li{{ ' class="active"'|is_active('^layout-default(.*)', page)|safe }}>
+        <a class="nav-link" href="layout-default.html">KPI</a>
+      </li>
+      <li{{ ' class="active"'|is_active('^layout-default(.*)', page)|safe }}>
+        <a class="nav-link" href="layout-default.html">Disk Usage</a>
+      </li>
+    </ul>
+  </li>
+</ul>

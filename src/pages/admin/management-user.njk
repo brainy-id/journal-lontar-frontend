@@ -1,0 +1,63 @@
+{% set title = 'User Management' %}
+{% set page = 'admin/management-user.html' %}
+{% extends 'admin/master.njk' %}
+
+{% block plugins_css %}
+    <link rel="stylesheet" href="../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+{% endblock %}
+
+{% block content %}
+    <section class="section">
+        <div class="section-header">
+            <h1>Management User</h1>
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Email</th>
+                                            <th>Jabatan</th>
+                                            <th width="5%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Andika</td>
+                                            <td>andika@indonesiapower.co.id</td>
+                                            <td>Teknisi Lokal</td>
+                                            <td>
+                                                <a href="#" class="btn btn-sm btn-icon btn-primary">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block plugins_js %}
+    <script src="../../node_modules/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="../../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+{% endblock %}
+
+{% block page_js %}
+    <script>
+        $(".table").dataTable({});
+    </script>
+{% endblock %}
