@@ -1,0 +1,229 @@
+{% set title = 'Content Management' %}
+{% set page = 'admin/management-content.html' %}
+{% extends 'admin/master.njk' %}
+
+{% block plugins_css %}
+    <link rel="stylesheet" href="../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+{% endblock %}
+
+{% block content %}
+    <section class="section">
+        <div class="section-header">
+            <h1>Management Content</h1>
+            
+        </div>
+        <div class="section-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Detail</h4>
+                            <div class="card-header-action">
+                                <a href="" class="btn btn-primary btn-icon btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    EDIT
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                 <dl class="col-12">
+                                    <dt>Type of Work</dt>
+                                    <dd>Pembongkaran Bearing IDF 1A</dd>
+                                </dl>
+                                <dl class="col-6">
+                                    <dt>Equipment</dt>
+                                    <dd>IDF 1A</dd>
+                                </dl>
+                                <dl class="col-6">
+                                    <dt>Equipment Type</dt>
+                                    <dd>IDF</dd>
+                                </dl>
+                                <dl class="col-6">
+                                    <dt>Area</dt>
+                                    <dd>Boiler</dd>
+                                </dl>
+                                <dl class="col-6">
+                                    <dt>Divisi</dt>
+                                    <dd>Har. Mekanik</dd>
+                                </dl>
+
+                                <dl class="col-6">
+                                    <dt>Contributor</dt>
+                                    <dd>Andika Firmansyah</dd>
+                                </dl>
+
+                                <dl class="col-6">
+                                    <dt>Created Date</dt>
+                                    <dd>2 March 2023</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Video</h4>
+                            <div class="card-header-action">
+                                <a href="" class="btn btn-primary btn-icon btn-sm">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    EDIT
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <video width="100%" controls>
+                                <source src="../../assets/video/video-demo.mp4" type="video/mp4">
+                                
+                                    Your browser does not support HTML video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Photos</h4>
+                            <div class="card-header-action">
+                                <a href="" class="btn btn-primary btn-icon btn-sm">
+                                    <i class="fas fa-plus    "></i>
+                                    TAMBAH
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://5.imimg.com/data5/SX/VX/OG/SELLER-308977/id-fan-500x500.jpg" alt="">
+                                        <div class="card-body">
+                                            <p class="card-text">Detail IDF 1A</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://5.imimg.com/data5/SX/VX/OG/SELLER-308977/id-fan-500x500.jpg" alt="">
+                                        <div class="card-body">
+                                            <p class="card-text">Detail IDF 1A</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://5.imimg.com/data5/SX/VX/OG/SELLER-308977/id-fan-500x500.jpg" alt="">
+                                        <div class="card-body">
+                                            <p class="card-text">Detail IDF 1A</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                Documents
+                            </h4>
+                            <div class="card-header-action">
+                                <a href="" class="btn btn-primary btn-icon btn-sm">
+                                    <i class="fas fa-plus    "></i>
+                                    TAMBAH
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">No</th>
+                                        <th>Judul</th>
+                                        <th width="10%"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            IK BLT.1234.123 PEMBONGKARAN BEARNING
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            QCD OH
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-primary">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">History</h4>
+                            <div class="card-header-action">
+                                <a href="" class="btn btn-primary btn-icon btn-sm">
+                                    <i class="fas fa-plus    "></i>
+                                    TAMBAH
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>By</th>
+                                        <th>Note</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>10/12/2022</td>
+                                        <td>Ibnu Jamil</td>
+                                        <td>Pembongkaran Baut Kearah Kiri</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block plugins_js %}
+    <script src="../../node_modules/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="../../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+{% endblock %}
+
+{% block page_js %}{% endblock %}
